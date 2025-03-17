@@ -1,3 +1,5 @@
+package Ticket;
+
 public class Bag {
     private Long amount;
     private Ticket ticket;
