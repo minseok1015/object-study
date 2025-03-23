@@ -1,6 +1,9 @@
-package Movie;
+package Movie.Discount;
 
-public class AmountDiscountPolicy extends DiscountPolicy {
+import Movie.Money;
+import Movie.Screening;
+
+public class AmountDiscountPolicy extends DefaultDiscountPolicy {
     private Money discountAmount;
 
     public AmountDiscountPolicy(Money discountAmount, DiscountCondition... conditions) {

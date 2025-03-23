@@ -1,4 +1,6 @@
-package Movie;
+package Movie.Discount;
+
+import Movie.Screening;
 
 import java.time.DayOfWeek;
 import java.time.LocalTime;

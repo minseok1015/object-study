@@ -1,5 +1,9 @@
 package Movie;
 
+import Movie.Discount.AmountDiscountPolicy;
+import Movie.Discount.PercentDiscountPolicy;
+import Movie.Discount.PeriodCondition;
+import Movie.Discount.SequenceCondition;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 

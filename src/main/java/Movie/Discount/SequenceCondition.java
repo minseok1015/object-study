@@ -1,4 +1,6 @@
-package Movie;
+package Movie.Discount;
+
+import Movie.Screening;
 
 public class SequenceCondition implements DiscountCondition {
     private int sequence;
