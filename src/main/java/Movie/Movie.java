@@ -1,21 +1,17 @@
 package Movie;
 
-import Movie.Discount.DiscountPolicy;
-
 import java.time.Duration;
 
-public class Movie {
+public abstract class Movie {
 
     private String title;
     private Duration runningTime;
     private Money fee;
-    private DiscountPolicy discountPolicy;
 
-    public Movie(String title, Duration runningTime, Money fee, DiscountPolicy discountPolicy) {
+    public Movie(String title, Duration runningTime, Money fee) {
         this.title = title;
         this.runningTime = runningTime;
         this.fee = fee;
-        this.discountPolicy = discountPolicy;
     }
 
     public Money getFee() {
@@ -23,10 +19,11 @@ public class Movie {
     }
 
     public Money calculateMovieFee(Screening screening) {
-        return fee.minus(discountPolicy.calculateDiscountAmount(screening));
+        return fee.minus(getDiscountAmount(screening));
     }
 
-    public void changeDiscountPolicy(DiscountPolicy discountPolicy) {
-        this.discountPolicy = discountPolicy;
-    }
+    public abstract Money getDiscountAmount(Screening screening);
+
+
 }
+
